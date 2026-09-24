@@ -116,14 +116,14 @@ export function closeLetter(immediate){
 }
 
 function resetReveals(){
-  document.querySelectorAll('.letter__miss li, .letter__body p').forEach((el) => {
+  document.querySelectorAll('.letter__hero, .letter__miss li, .letter__body p').forEach((el) => {
     el.classList.remove('is-in');
   });
 }
 
 function watchReveals(){
   if (io) io.disconnect();
-  const nodes = document.querySelectorAll('.letter__miss li, .letter__body p');
+  const nodes = document.querySelectorAll('.letter__hero, .letter__miss li, .letter__body p');
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce){
     nodes.forEach((el) => el.classList.add('is-in'));
